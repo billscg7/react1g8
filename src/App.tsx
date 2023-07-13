@@ -37,6 +37,14 @@ function App() {
   const incrementNumber = () => {
     setCount(count+1); 
   }
+
+  const decrementNumber = () => {
+    setCount(count-1); 
+  }
+
+  const resetNumber = () => {
+    setCount(0); 
+  }
  
   return (
     <React.Fragment>
@@ -59,9 +67,11 @@ function App() {
           {count}
         </div>
         <button onClick={() => incrementNumber()}>+1</button>
+        <button onClick={() => decrementNumber()}>-1</button>
+        <button onClick={() => resetNumber()}>reset</button>
       </div>
 
-      <hr />
+      <hr />s
       <br /><br />
 
       <SuperComponent type="class-super">
